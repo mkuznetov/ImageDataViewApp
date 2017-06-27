@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+      <script type="text/javascript">
+         Ext.onReady(function() {
+
+var imageModel = Ext.define('ImageModel', {
+        extend: 'Ext.data.Model',
+        fields: [
+           {name: 'src', type:'string'},
+           {name: 'caption', type:'string'}
+        ]
+    });
+
+var imageStore = Ext.create('Ext.data.Store', {
+    id: 'imagesStore',
+    model: 'ImageModel',
+    data: [
+        {src:'http://www.sencha.com/img/20110215-feat-drawing.png', caption:'Drawing & Charts'},
+        {src:'http://www.sencha.com/img/20110215-feat-data.png', caption:'Advanced Data'},
+        {src:'http://www.sencha.com/img/20110215-feat-html5.png', caption:'Overhauled Theme'},
+        {src:'http://www.sencha.com/img/20110215-feat-perf.png', caption:'Performance Tuned'}            
+    ]
+});
+
+var imageTpl = new Ext.XTemplate(
+    '<tpl for="."><div style="thumb-wrap"><img src="{src}"/><br/><span>{caption}</span></div></tpl>'
+);
+
+var view = Ext.create('Ext.DataView', {
+    store: Ext.data.StoreManager.lookup('imagesStore'),
+    tpl: imageTpl,
+    itemSelector: 'div.thumb-wrap',
+    emptyText: 'No images available',
+    //renderTo: Ext.getBody()
+    renderTo: 'helloWorldPanel'
+});
+
+         });
+      </script>
+   </head>
+   <body>
+      <div id="helloWorldPanel" />
+   </body>
+</html>
+
