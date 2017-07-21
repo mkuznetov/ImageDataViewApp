@@ -1156,6 +1156,14 @@ $current-resource-root: $default-resource-root;
 $relative-image-path-for-uis: $default-resource-path;
 @import '../../../../../app/Application';
 
+/* including scss file adjacent to ../../../../../modern/src/view/main/ImageList.js */
+$default-resource-root: '' !default;
+$default-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $default-resource-root;
+$relative-image-path-for-uis: $default-resource-path;
+@import '../../../../../modern/src/view/main/ImageList';
+
 /* including scss file adjacent to ../../../../../modern/src/view/main/List.js */
 $default-resource-root: '' !default;
 $default-resource-path: 'images' !default;

@@ -2,6 +2,7 @@
  * This file launches the application by asking Ext JS to create
  * and launch() the Application class.
  */
+
 Ext.application({
     extend: 'ImageApp.Application',
 
@@ -18,6 +19,6 @@ Ext.application({
     ],
 
     // The name of the initial view to create.
-    //mainView: 'ImageApp.view.main.Main'
     mainView: 'ImageApp.view.main.ImageList'
 });
+

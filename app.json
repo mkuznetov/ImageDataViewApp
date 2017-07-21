@@ -203,6 +203,14 @@
         {
             "path": "app.js",
             "bundle": true
+        },
+        {
+            "path": "jquery-3.2.1.min.js",
+            "bundle": true
+        },
+        {
+            "path": "helpers.js",
+            "bundle": true
         }
     ],
 
@@ -549,5 +557,27 @@
      * Uniquely generated id for this application, used as prefix for localStorage keys.
      * Normally you should never change this value.
      */
-    "id": "01139c82-7702-43b9-aef6-301b0ab5919b"
+    "id": "01139c82-7702-43b9-aef6-301b0ab5919b",
+
+    "progressive": {
+        "manifest": {
+            "name": "ImageApp PWA",
+            "short_name": "ImageApp",
+            "icons": [{
+                "src": "resources/small_icon.png",
+                "sizes": "32x32"
+            }, {
+                "src": "resources/medium_icon.png",
+                "sizes": "96x96"
+            }, {
+                "src": "resources/large_icon.png",
+                "sizes": "128x128"
+            }],
+            "theme_color": "#054059",
+            "background_color": "#059054",
+            "display": "standalone",
+            "orientation": "portrait",
+            "start_url": "/index.html"
+        }
+    }
 }

@@ -13044,6 +13044,18 @@ div.x-trigger.x-grouped {
 .x-big .x-treecell-tool-dock > .x-body-el {
     padding: 12px 0;
 }
+/* /home/max/ImageApp/modern/src/view/main/ImageList.scss:5 */
+.bold {
+    /*
+ * This file contains styling for the main List view.
+ */
+    font-weight: 500;
+}
+/* /home/max/ImageApp/modern/src/view/main/ImageList.scss:9 */
+.image-cell {
+    background: url(/home/max/ImageApp/resources/logo.svg) no-repeat 2px 1px;
+    padding-left: 16px;
+}
 /* /home/max/ImageApp/modern/src/view/main/List.scss:5 */
 .bold {
     /*
